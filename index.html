@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://kit.fontawesome.com/a14ae32021.js" crossorigin="anonymous"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>I love you lady</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/</span><br />
+			<span class="space"/><span class="comments">Me gustas</span><br />
+			<span class="space"/><span class="comments">/</span><br />
+			mi señorita Vicky<br />
+			Me gustaste sin siquiera intentarlo... imagina cómo sería si lo intentaras.<br />
+			<span class="comments">// la cago bastante, no? </span><br />
+			supongo que me tendras que aguntar mucho, gracias por eso<br />
+			<span class="comments">// a veces me pregunto como serian las cosas si ambos pudieramos estar juntos.</span><br />
+			seguramente muchas cosas serian mejores para ambos<br />
+			ya sea por que yo te influenciaria o tu a mi<br />
+			buno, soñar no cuesta nada, no? <br />
+			<span class="comments">// me pregunto que pensaras de todo lo "nuestro" en todo momento.
+			</span><br />
+			yo en genral simpre pienso en ti, no se si en un "nosotros"<br />
+			pero si en ti, todo el tiempo diria, es algo que me molesta<br />
+			siempre he sido raro, al igual que tu, tal vez por eso tenemos algo<br />
+			<span class="comments">// hay muchas cosas aun en el aire, no?</span><br />
+			seguiran pasando muchas cosas en la vida de cada uno<br />
+			y odio eso, no estar ahi<br />
+			<br>
+			<br>
+			muchas mamadas, no?<br />
+			solo queria decirte que me gustas, y eso no ha cambiado aun<br />
+			y no creo que cambie de aca a unos años por la naturaleza de mi yo<br/>
+			<br>
+			<br>
+			solo te querre a mi manera, como lo he estado haciendo todo este tiempo, no te sientas comprometida a nada, no me debes nada<br />
+			<br>
+			<br>
+			presiona el cora<br />
+			<br>
+			<span id="heartspan">
+			<a href="https://www.youtube.com/watch?v=JV0HWE3rQcA" id="icon"></i></a>
+			</span>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					time passes I LOVE YOU
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I LOVE YOU SO MUCH<br/>
+					<div class="signature">- Benicio</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+var together = new Date();
+together.setFullYear(2023, 3, 12);
+together.setHours(16);
+together.setMinutes(30);
+together.setSeconds(0);
+together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(together);
+	setInterval(function () {
+		timeElapse(together);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+</body>
+</html>
